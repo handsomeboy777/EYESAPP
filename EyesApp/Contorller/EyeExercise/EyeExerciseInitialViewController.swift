@@ -8,14 +8,20 @@
 import UIKit
 
 class EyeExerciseInitialViewController: UIViewController {
+    
+    // MARK: - IBOutlet
 
     @IBOutlet weak var continueButton: UIButton!
     @IBOutlet weak var contentLabel: UILabel!
+    
+    // MARK: - LifeCycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        // Do any additional setup after loading the view.
     }
+    
+    // MARK: - UI Settings
     
     func setupUI() {
         continueButton.layer.cornerRadius = 5
@@ -25,22 +31,10 @@ class EyeExerciseInitialViewController: UIViewController {
         navigationItem.title = "護眼運動"
     }
     
+    // MARK: - IBAction
+    
     @IBAction func continueBtnClicked(_ sender: UIButton) {
         let nextVC = EyeExerciseViewController()
         navigationController?.pushViewController(nextVC, animated: true)
     }
-    
-    
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

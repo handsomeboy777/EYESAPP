@@ -1,5 +1,5 @@
 //
-//  MainTabberViewController.swift
+//  BaseTabBarController.swift
 //  LightApp2
 //
 //  Created by imac-2437 on 2023/5/19.
@@ -7,15 +7,14 @@
 
 import UIKit
 
-class MainTabberViewController: UITabBarController {
+class BaseTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTabbar()
-        // Do any additional setup after loading the view.
+        setupTabBar()
     }
     
-    func setupTabbar() {
+    func setupTabBar() {
         let mainNC = UINavigationController(rootViewController: MainViewController())
         let recordNC = UINavigationController(rootViewController: RecordViewController())
         let EyeExerciseNC = UINavigationController(rootViewController: EyeExerciseInitialViewController())
@@ -25,16 +24,4 @@ class MainTabberViewController: UITabBarController {
         
         setViewControllers([mainNC, recordNC,EyeExerciseNC], animated: true)
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

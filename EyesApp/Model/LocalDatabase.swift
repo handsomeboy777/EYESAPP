@@ -8,8 +8,9 @@
 import Foundation
 
 class LocalDatabase: NSObject {
-    static let shared = LocalDatabase()
-    var timeRecord:[Date] = []
-    var statusRecord:[Int] = []
     
+    static let shared = LocalDatabase()
+    
+    var timeRecord: [Date] = []
+    var statusRecord: [Int] = []
 }
