@@ -1,6 +1,6 @@
 //
 //  MainViewController.swift
-//  LightApp2
+//  EyesApp
 //
 //  Created by imac-2437 on 2023/5/9.
 //
